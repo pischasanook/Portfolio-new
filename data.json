@@ -1,19 +1,19 @@
 {
   "brand": "ICONIC",
-  "date": "15 May 2030",
-  "name": "JANE DOE",
+  "date": "5 Nov 2026",
+  "name": "Pischa",
   "role": "Creative Director · Fashion & Visual Design",
   "tagline": "Ideas with identity. Stories with style.",
-  "intro": "A creative portfolio exploring fashion, image-making and visual storytelling through a modern editorial lens.",
+  "intro": "ดิฉันเป็นคนหนึ่งที่เชื่อว่าทุกประสบการณ์คือโอกาสในการเรียนรู้และพัฒนาตนเอง ดิฉันเป็นคนที่มีความตั้งใจ ใฝ่เรียนรู้ ชอบตั้งคำถาม และเปิดรับประสบการณ์ใหม่ ๆ อยู่เสมอ แม้ในบางครั้งจะต้องพบเจอกับความท้าทายหรืออุปสรรค",
   "about": {
     "lead": "A curious creative with a passion for visual stories.",
-    "body": "I bring ideas to life through thoughtful concepts, strong art direction and a clear point of view. My work balances minimal design with expressive details.",
+    "body": "สำหรับฉัน Portfolio เล่มนี้ไม่ได้เป็นเพียงการรวบรวมผลงานและกิจกรรมที่ผ่านมาเท่านั้น แต่ยังเป็นพื้นที่ที่แสดงให้เห็นถึงความตั้งใจ ความพยายาม และเส้นทางการเติบโตของฉัน พร้อมก้าวไปสู่โอกาสใหม่ ๆ",
     "skills": [
-      "Art direction",
-      "Visual identity",
-      "Editorial design",
-      "Photography",
-      "Creative strategy"
+      "ตั้งใจ – เมื่อมีเป้าหมายก็อยากทำให้สำเร็จ",
+      "ช่างสงสัย – ชอบตั้งคำถามและเรียนรู้สิ่งใหม่",
+      "ละเอียดอ่อน – ใส่ใจความรู้สึกและสิ่งรอบตัว",
+      "อดทน – พยายามก้าวผ่านอุปสรรค",
+      "รักการพัฒนาตัวเอง – อยากเห็นตัวเองเติบโตขึ้นในทุกวัน"
     ]
   },
   "concept": {
