@@ -1,0 +1,104 @@
+{
+  "brand": "ICONIC",
+  "date": "15 May 2030",
+  "name": "JANE DOE",
+  "role": "Creative Director · Fashion & Visual Design",
+  "tagline": "Ideas with identity. Stories with style.",
+  "intro": "A creative portfolio exploring fashion, image-making and visual storytelling through a modern editorial lens.",
+  "about": {
+    "lead": "A curious creative with a passion for visual stories.",
+    "body": "I bring ideas to life through thoughtful concepts, strong art direction and a clear point of view. My work balances minimal design with expressive details.",
+    "skills": [
+      "Art direction",
+      "Visual identity",
+      "Editorial design",
+      "Photography",
+      "Creative strategy"
+    ]
+  },
+  "concept": {
+    "title": "CONCEPT",
+    "lead": "Make a statement. Keep it timeless.",
+    "body": "A visual language built around contrast, confident typography and considered composition. Each project begins with a story and grows into a distinct visual world."
+  },
+  "work": [
+    {
+      "title": "EDITORIAL",
+      "type": "Fashion campaign",
+      "description": "A bold editorial direction built around movement, texture and quiet confidence.",
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "title": "STUDIO NOTES",
+      "type": "Portrait series",
+      "description": "An intimate portrait study focused on character, light and natural expression.",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "title": "FORM & FEEL",
+      "type": "Fashion story",
+      "description": "A study of silhouette and form, captured in a clean monochrome palette.",
+      "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+    }
+  ],
+  "lookbook": {
+    "lead": "A collection of moments, shapes and personalities.",
+    "body": "Exploring the relationship between clothing, identity and the spaces we move through.",
+    "images": [
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85",
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85",
+      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"
+    ]
+  },
+  "clients": [
+    "CLIENT NAME",
+    "CLIENT NAME",
+    "CLIENT NAME",
+    "CLIENT NAME",
+    "CLIENT NAME",
+    "CLIENT NAME"
+  ],
+  "testimonials": [
+    {
+      "name": "MARY SMITH",
+      "role": "CEO, Founder",
+      "quote": "Jane has a rare ability to turn a simple idea into a thoughtful and memorable visual story.",
+      "avatar": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=85"
+    },
+    {
+      "name": "JAMES SMITH",
+      "role": "Creative Producer",
+      "quote": "The process was collaborative, considered and full of fresh ideas. The result felt completely true to our brand.",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=85"
+    }
+  ],
+  "caseStudy": {
+    "title": "A NEW VISUAL LANGUAGE",
+    "description": "A refreshed campaign system designed to bring consistency and character across every touchpoint.",
+    "result": [
+      {
+        "label": "Audience engagement",
+        "value": "27%"
+      },
+      {
+        "label": "Brand recall",
+        "value": "36%"
+      },
+      {
+        "label": "Campaign reach",
+        "value": "65%"
+      }
+    ]
+  },
+  "reviews": {
+    "rating": 5,
+    "quote": "Thoughtful from the first conversation to the final detail. The work speaks for itself.",
+    "by": "JANE DOE · CLIENT REVIEW"
+  },
+  "contact": {
+    "email": "hello@janedoe.studio",
+    "phone": "+00 123 456 7890",
+    "social": "@janedoe.studio",
+    "address": "Studio One, Creative District"
+  }
+}

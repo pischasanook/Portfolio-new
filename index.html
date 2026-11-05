@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jane Doe — creative portfolio">
+<title>Jane Doe — Portfolio</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Oswald:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap');
+:root{--paper:#f1f1ef;--ink:#111;--muted:#666;--line:#aaa;--accent:#e56d68;--pad:clamp(20px,4vw,58px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#d4d4d2;color:var(--ink);font-family:'DM Sans',Arial,sans-serif}
+.page{width:min(1180px,calc(100% - 34px));margin:34px auto 70px;display:grid;gap:18px}
+.sheet{background:var(--paper);box-shadow:0 5px 14px #0002;position:relative;overflow:hidden;padding:var(--pad);min-height:390px}
+.topline{display:flex;justify-content:space-between;align-items:center;font:500 9px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:#333}
+.date{border:1px solid #777;border-radius:30px;padding:4px 10px;font-size:8px}
+h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:600;letter-spacing:-.035em;line-height:.95}
+h1{font-size:clamp(64px,11vw,142px);margin:0;text-align:center}
+h2{font-size:clamp(40px,6vw,76px);margin:0 0 24px}
+h3{font-size:30px;margin:0 0 12px}
+p{font-size:12px;line-height:1.65;color:#555}
+.small{font-size:9px;line-height:1.55}.mono{font:500 9px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.06em}
+.signature{font:600 42px 'Caveat',cursive;color:var(--accent);transform:rotate(-12deg);display:inline-block}
+.cover{min-height:540px;display:flex;flex-direction:column;justify-content:space-between}
+.cover-center{position:relative;display:grid;place-items:center;flex:1}
+.cover-center .signature{position:absolute;left:50%;top:51%;transform:translate(-5%,-50%) rotate(-14deg);font-size:clamp(44px,7vw,82px)}
+.cover-foot{display:flex;justify-content:space-between;align-items:end}.dots{color:var(--accent);letter-spacing:5px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:390px}
+.split>div{padding:var(--pad)}.split>div+div{border-left:1px solid var(--line)}
+.photo{width:100%;height:100%;min-height:230px;object-fit:cover;filter:grayscale(1)}
+.intro{display:grid;grid-template-columns:1fr 1.05fr;gap:36px;align-items:center;margin-top:34px}
+.intro .photo{height:260px}.lead{font-size:16px;color:#222;line-height:1.35}
+.rule{height:1px;background:var(--line);margin:16px 0}
+.about-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}
+.about-layout .photo{height:310px}
+.accent-dot{width:46px;height:46px;border-radius:50%;background:var(--accent);position:absolute;left:55%;top:45%;opacity:.95}
+.concept{display:grid;grid-template-columns:.8fr 1.2fr;min-height:390px}
+.concept-image{position:relative;padding:var(--pad);border-right:1px solid var(--line)}
+.concept-image img{width:72%;height:270px;object-fit:cover;filter:grayscale(1);display:block;margin:auto}
+.concept-copy{padding:var(--pad);display:flex;flex-direction:column;justify-content:center}
+.work-list{display:grid;grid-template-columns:1fr 1fr;min-height:410px}
+.work-list .list{padding:var(--pad);display:flex;flex-direction:column}
+.work-row{padding:16px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:105px 1fr;gap:20px}
+.work-gallery{padding:var(--pad);border-left:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.work-gallery img{width:100%;height:100%;min-height:145px;object-fit:cover;filter:grayscale(1)}
+.work-gallery img:first-child{grid-row:span 2}
+.portfolio-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+.mosaic{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mosaic img{width:100%;height:150px;object-fit:cover;filter:grayscale(1)}
+.mosaic img:nth-child(2){margin-top:26px}.mosaic img:nth-child(3){margin-top:52px}
+.look{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:center}
+.look-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.look-photos img{width:100%;height:220px;object-fit:cover;filter:grayscale(1)}
+.clients{display:grid;grid-template-columns:1fr 1fr;min-height:390px}
+.client-list{padding:var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;align-content:center}
+.client{border-bottom:1px solid var(--line);padding:10px 0;font:500 10px 'DM Mono',monospace}
+.client-image{border-left:1px solid var(--line);padding:14px}.client-image img{width:100%;height:100%;max-height:340px;object-fit:cover;filter:grayscale(1)}
+.testimonials{display:grid;grid-template-columns:.8fr 1fr 1fr;min-height:330px}
+.testimonials>div{padding:var(--pad)}.testimonials>div+div{border-left:1px solid var(--line)}
+.person{display:flex;align-items:center;gap:14px;margin-bottom:18px}.person img{width:62px;height:62px;border-radius:50%;object-fit:cover;filter:grayscale(1)}
+.case{display:grid;grid-template-columns:1fr 1fr;min-height:370px}
+.case>div{padding:var(--pad)}.case>div+div{border-left:1px solid var(--line)}
+.metric{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:12px 0;font-size:11px}.metric strong{font:500 16px 'Oswald',sans-serif}
+.review{display:grid;grid-template-columns:1fr 1fr 1fr;min-height:350px}
+.review>div{padding:var(--pad)}.review>div+div{border-left:1px solid var(--line)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:18px}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;min-height:390px}
+.contact img{width:100%;height:300px;object-fit:cover;filter:grayscale(1)}
+.contact-line{display:grid;grid-template-columns:90px 1fr;gap:14px;border-bottom:1px solid var(--line);padding:12px 0;font-size:11px}
+.footer{display:flex;justify-content:space-between;gap:15px;font:9px 'DM Mono',monospace;color:#555;padding:0 4px}
+@media(max-width:700px){.page{width:calc(100% - 20px);margin:10px auto 35px;gap:10px}.sheet{padding:22px;min-height:auto}.cover{min-height:390px}.split,.concept,.work-list,.portfolio-grid,.look,.clients,.case,.contact{grid-template-columns:1fr}.split>div+div,.concept-image,.work-gallery,.client-image,.case>div+div{border:0;border-top:1px solid var(--line)}.intro{grid-template-columns:1fr;gap:18px}.about-layout{grid-template-columns:1fr}.about-layout .photo{height:250px}.concept-image img{height:220px}.work-gallery{min-height:260px}.work-gallery img{min-height:120px}.mosaic img{height:120px}.look-photos img{height:150px}.clients{min-height:0}.client-image img{height:240px}.testimonials,.review{grid-template-columns:1fr}.testimonials>div+div,.review>div+div{border:0;border-top:1px solid var(--line)}.contact img{height:240px}.accent-dot{display:none}}
+</style>
+</head>
+<body>
+<main class="page" id="app">
+<section class="sheet cover">
+  <div class="topline"><span data-brand>ICONIC</span><span class="date" data-date>15 May 2030</span></div>
+  <div class="cover-center"><h1>PORTFOLIO</h1><span class="signature" data-name>Jane Doe</span></div>
+  <div class="cover-foot"><div><div class="mono" data-name>JANE DOE</div><p class="small" data-role>Creative Director · Fashion & Visual Design</p></div><span class="dots">•••</span></div>
+</section>
+<section class="sheet">
+  <div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div>
+  <div class="intro"><div><h2 data-name>JANE DOE</h2><div class="rule"></div><div class="mono">INTRODUCTION</div><p class="lead" data-intro></p><p data-tagline></p><span class="signature" data-name>Jane Doe</span></div><img class="photo" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85" alt="Editorial portrait"></div>
+</section>
+<section class="sheet about-layout">
+  <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">ABOUT US</h2><p class="lead" data-about-lead></p><p data-about-body></p><div class="rule"></div><ul id="skills" class="small"></ul></div>
+  <img class="photo" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85" alt="Fashion portrait">
+</section>
+<section class="sheet concept">
+  <div class="concept-image"><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85" alt="Concept fashion image"><span class="signature">Aesthetic</span></div>
+  <div class="concept-copy"><h2 data-concept-title>CONCEPT</h2><p class="mono" data-concept-lead></p><p data-concept-body></p></div>
+</section>
+<section class="sheet work-list">
+  <div class="list"><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:35px">THE WORK</h2><div id="work-rows"></div></div>
+  <div class="work-gallery" id="work-gallery"></div>
+</section>
+<section class="sheet">
+ <div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div>
+ <div class="portfolio-grid"><div><h2>PORTFOLIO</h2><span class="signature" data-name>Jane Doe</span><p class="small" data-intro></p></div><div class="mosaic" id="mosaic"></div></div>
+</section>
+<section class="sheet look">
+ <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">LOOKBOOK</h2><p class="lead" data-look-lead></p><p data-look-body></p></div>
+ <div class="look-photos" id="look-photos"></div>
+</section>
+<section class="sheet clients">
+ <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">S/T CLIENT</h2><div class="client-list" id="clients"></div></div>
+ <div class="client-image"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85" alt="Fashion campaign"></div>
+</section>
+<section class="sheet">
+ <div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:35px">TESTIMONIAL</h2>
+ <div class="testimonials" id="testimonials"></div>
+</section>
+<section class="sheet case">
+ <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">CASE STUDY</h2><p class="lead" data-case-title></p><p data-case-description></p></div>
+ <div><div class="mono">RESULT</div><div id="metrics"></div><div class="look-photos" style="margin-top:20px"><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=85" alt="Portrait"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=85" alt="Portrait"></div></div>
+</section>
+<section class="sheet review">
+ <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">REVIEWS</h2><p data-review-quote></p></div>
+ <div><div class="stars" id="stars">★★★★★</div><span class="signature" data-review-by>Jane Doe</span><p class="small">LOREM STUDIO · CLIENT FEEDBACK</p></div>
+ <div><img class="photo" style="height:260px" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=85" alt="Fashion look"></div>
+</section>
+<section class="sheet contact">
+ <div><div class="topline"><span data-brand>ICONIC</span><span class="date" data-date></span></div><h2 style="margin-top:38px">CONTACT US</h2><div id="contact-lines"></div></div>
+ <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85" alt="Jane Doe portrait">
+</section>
+<div class="footer"><span>© <span id="year">2030</span> <span data-name>JANE DOE</span></span><span>DESIGNED WITH INTENTION · <span data-brand>ICONIC</span></span></div>
+</main>
+<script>
+const fallback = {"brand": "ICONIC", "date": "15 May 2030", "name": "JANE DOE", "role": "Creative Director · Fashion & Visual Design", "tagline": "Ideas with identity. Stories with style.", "intro": "A creative portfolio exploring fashion, image-making and visual storytelling through a modern editorial lens.", "about": {"lead": "A curious creative with a passion for visual stories.", "body": "I bring ideas to life through thoughtful concepts, strong art direction and a clear point of view. My work balances minimal design with expressive details.", "skills": ["Art direction", "Visual identity", "Editorial design", "Photography", "Creative strategy"]}, "concept": {"title": "CONCEPT", "lead": "Make a statement. Keep it timeless.", "body": "A visual language built around contrast, confident typography and considered composition. Each project begins with a story and grows into a distinct visual world."}, "work": [{"title": "EDITORIAL", "type": "Fashion campaign", "description": "A bold editorial direction built around movement, texture and quiet confidence.", "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=85"}, {"title": "STUDIO NOTES", "type": "Portrait series", "description": "An intimate portrait study focused on character, light and natural expression.", "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1000&q=85"}, {"title": "FORM & FEEL", "type": "Fashion story", "description": "A study of silhouette and form, captured in a clean monochrome palette.", "image": "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"}], "lookbook": {"lead": "A collection of moments, shapes and personalities.", "body": "Exploring the relationship between clothing, identity and the spaces we move through.", "images": ["https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=85", "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85", "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=85"]}, "clients": ["CLIENT NAME", "CLIENT NAME", "CLIENT NAME", "CLIENT NAME", "CLIENT NAME", "CLIENT NAME"], "testimonials": [{"name": "MARY SMITH", "role": "CEO, Founder", "quote": "Jane has a rare ability to turn a simple idea into a thoughtful and memorable visual story.", "avatar": "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=85"}, {"name": "JAMES SMITH", "role": "Creative Producer", "quote": "The process was collaborative, considered and full of fresh ideas. The result felt completely true to our brand.", "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=85"}], "caseStudy": {"title": "A NEW VISUAL LANGUAGE", "description": "A refreshed campaign system designed to bring consistency and character across every touchpoint.", "result": [{"label": "Audience engagement", "value": "27%"}, {"label": "Brand recall", "value": "36%"}, {"label": "Campaign reach", "value": "65%"}]}, "reviews": {"rating": 5, "quote": "Thoughtful from the first conversation to the final detail. The work speaks for itself.", "by": "JANE DOE · CLIENT REVIEW"}, "contact": {"email": "hello@janedoe.studio", "phone": "+00 123 456 7890", "social": "@janedoe.studio", "address": "Studio One, Creative District"}};
+function fill(d){
+ const set=(sel,val)=>document.querySelectorAll(sel).forEach(el=>el.textContent=val??'');
+ set('[data-brand]',d.brand);set('[data-date]',d.date);set('[data-name]',d.name);set('[data-role]',d.role);
+ set('[data-intro]',d.intro);set('[data-tagline]',d.tagline);
+ set('[data-about-lead]',d.about.lead);set('[data-about-body]',d.about.body);
+ set('[data-concept-title]',d.concept.title);set('[data-concept-lead]',d.concept.lead);set('[data-concept-body]',d.concept.body);
+ set('[data-look-lead]',d.lookbook.lead);set('[data-look-body]',d.lookbook.body);
+ set('[data-case-title]',d.caseStudy.title);set('[data-case-description]',d.caseStudy.description);
+ set('[data-review-quote]',d.reviews.quote);set('[data-review-by]',d.reviews.by);
+ document.getElementById('year').textContent=(d.date.match(/\d{4}/)||['2030'])[0];
+ document.getElementById('skills').innerHTML=d.about.skills.map(x=>`<li>${x}</li>`).join('');
+ document.getElementById('work-rows').innerHTML=d.work.map(w=>`<div class="work-row"><b class="mono">${w.title}</b><span class="small">${w.type}<br>${w.description}</span></div>`).join('');
+ document.getElementById('work-gallery').innerHTML=d.work.map(w=>`<img src="${w.image}" alt="${w.title}">`).join('');
+ document.getElementById('mosaic').innerHTML=d.work.map(w=>`<img src="${w.image}" alt="${w.title}">`).join('');
+ document.getElementById('look-photos').innerHTML=d.lookbook.images.map((u,i)=>`<img src="${u}" alt="Lookbook image ${i+1}">`).join('');
+ document.getElementById('clients').innerHTML=d.clients.map(c=>`<div class="client">${c}</div>`).join('');
+ document.getElementById('testimonials').innerHTML=d.testimonials.map(t=>`<div><div class="person"><img src="${t.avatar}" alt="${t.name}"><div><b class="mono">${t.name}</b><div class="small">${t.role}</div></div></div><p>${t.quote}</p></div>`).join('');
+ document.getElementById('metrics').innerHTML=d.caseStudy.result.map(m=>`<div class="metric"><span>${m.label}</span><strong>${m.value}</strong></div>`).join('');
+ document.getElementById('stars').textContent='★'.repeat(Math.max(0,Math.min(5,d.reviews.rating)));
+ document.getElementById('contact-lines').innerHTML=[['EMAIL',d.contact.email],['PHONE',d.contact.phone],['SOCIAL',d.contact.social],['ADDRESS',d.contact.address]].map(x=>`<div class="contact-line"><b class="mono">${x[0]}</b><span>${x[1]}</span></div>`).join('');
+}
+fill(fallback);
+fetch('data.json').then(r=>{if(!r.ok)throw Error('data.json not found');return r.json()}).then(fill).catch(()=>{});
+</script>
+</body>
+</html>
